@@ -5,30 +5,54 @@
         <h1 class="contact-title">Recipes</h1>
       </div>
       <div class="list" id="recipes">
-        <div class="filter">
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="User research" /> User Research
-          </label>
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="Content strategy" /> Content strategy
-          </label>
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="Visual design" /> Visual design
-          </label>
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="Accessibility" /> Accessibility
-          </label>
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="Data analysis" /> Data analysis
-          </label>
-          <label>
-            <input type="checkbox" v-model="selectedCuisines" value="UX fundamentals" /> UX fundamentals
-          </label>
+        <div class="filter noselect">
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="User research" />
+              <span>User Research</span>
+            </label>
+          </div>
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="Content strategy" />
+              <span>Content strategy</span>
+            </label>
+          </div>
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="Visual design" />
+              <span>Visual design</span>
+            </label>
+          </div>
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="Accessibility" />
+              <span>Accessibility</span>
+            </label>
+          </div>
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="Data analysis" />
+              <span>Data & analysis</span>
+            </label>
+          </div>
+          <div class="styled-checkbox">
+            <label>
+              <input type="checkbox" v-model="selectedCuisines" value="UX fundamentals" />
+              <span>UX fundamentals</span>
+            </label>
+          </div>
         </div>
         <!-- todo: insert a button that clears all checkboxes -->
-        <ul class="recipes-list">
-          <li v-for="recipe in filteredRecipes" :key="recipe.name">{{ recipe.name }}</li>
-        </ul>
+        <div class="recipes">
+          <ul class="recipes-list">
+            <li
+              class="recipe"
+              v-for="recipe in filteredRecipes"
+              :key="recipe.name"
+            >{{ recipe.name }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </Layout>
@@ -70,5 +94,70 @@ export default {
 </script>
 
 <style scoped>
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.filter {
+  overflow: hidden;
+}
+
+.styled-checkbox {
+  margin: 6px;
+  background-color: #efefef;
+  border-radius: 4px;
+  overflow: auto;
+  float: left;
+}
+
+.styled-checkbox:hover {
+  background: #333;
+  color: #fff;
+}
+
+.styled-checkbox label span {
+  text-align: center;
+  padding: 8px 16px;
+  display: block;
+}
+
+.styled-checkbox label span:hover {
+  cursor: pointer;
+}
+
+.styled-checkbox label input {
+  position: absolute;
+  top: -20px;
+}
+
+.styled-checkbox input:checked + span {
+  background-color: #333;
+  color: #fff;
+}
+
+.recipes {
+}
+
+.recipes-list {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: auto auto auto;
+}
+
+.recipe {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 72px;
+  background-color: #f9f9f9;
+}
 </style>
 

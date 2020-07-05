@@ -2,11 +2,11 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "Portfolio",
-  siteUrl: `https://www.itsnwa.com`,
+  siteName: "UX Cookbook",
+  siteUrl: `https://www.uxcookbook.org`,
   host: "0.0.0.0",
-  titleTemplate: "%s - NWA",
-  siteDescription: "Creative technologist",
+  titleTemplate: "%s - UX Cookbook",
+  siteDescription: "Recipes for getting started with UX",
   plugins: [
     {
       use: "@gridsome/source-filesystem",
@@ -16,9 +16,9 @@ module.exports = {
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
     },
     {
       use: "@gridsome/source-filesystem",
@@ -28,14 +28,14 @@ module.exports = {
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
+    },
   ],
   transformers: {
     remark: {
-      plugins: ["@gridsome/remark-prismjs"]
-    }
-  }
+      plugins: ["@gridsome/remark-prismjs"],
+    },
+  },
 };

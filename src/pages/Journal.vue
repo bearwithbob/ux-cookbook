@@ -1,26 +1,42 @@
 <template>
   <Layout>
-
     <div class="container">
       <div class="journal-hero">
-        <h1 class="journal-header">
-          a wise person once said...
-        </h1>
+        <h1 class="journal-header">a wise person once said...</h1>
       </div>
     </div>
 
-    <g-link 
+    <div class="filter noselect">
+      <div v-for="item in $page.posts.edges" :key="item.node.id" class="styled-checkbox">
+        <label>
+          <input type="checkbox" v-model="selectedCuisines" :value="item.node.cuisine" />
+          <span>{{ item.node.cuisine }}</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="recipes">
+      <ul class="recipes-list">
+        <li
+          class="recipe"
+          v-for="recipe in filteredRecipes"
+          :key="recipe.node.title"
+        >{{ recipe.node.title }}</li>
+      </ul>
+    </div>
+
+    <g-link
       :to="item.node.path"
-      v-for="item in $page.posts.edges" 
+      v-for="item in $page.posts.edges"
       :key="item.node.id"
       class="journal-post"
     >
       <div class="container journal">
         <h2 class="journal-title">{{ item.node.title }}</h2>
+        <p class="journal-cuisine">{{ item.node.cuisine }}</p>
         <p class="journal-excerpt">{{ item.node.excerpt }}</p>
       </div>
     </g-link>
-      
   </Layout>
 </template>
 
@@ -33,6 +49,7 @@ query Journal {
         path
         title
         excerpt
+        cuisine
       }
     }
   }
@@ -40,8 +57,37 @@ query Journal {
 </page-query>
 
 <script>
+// three steps: 1) get all cuisines and store into an array; 2) get all recipes; 3) filter recipes by selection
 export default {
-}
+  data() {
+    return {
+      recipes: [],
+      selectedCuisines: []
+    };
+  },
+  computed: {
+    getRecipes() {
+      this.recipes = this.$page.posts.edges;
+    },
+    filteredRecipes() {
+      var userSelected = this.selectedCuisines;
+      if (!userSelected.length) {
+        this.getRecipes;
+        return this.recipes;
+      } else {
+        this.getRecipes;
+        return this.recipes.filter(function(recipe) {
+          // console.log(recipe.node.cuisine);
+          // console.log(Array.from(recipe.node.cuisine));
+          // console.log(JSON.parse(JSON.stringify(userSelected)));
+          // console.log(userSelected.includes(recipe.node.cuisine));
+          // console.log(recipe.node.cuisine.some(c => userSelected.includes(c)));
+          return recipe.node.cuisine.some(c => userSelected.includes(c));
+        });
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>

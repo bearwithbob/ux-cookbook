@@ -1,10 +1,13 @@
 ---
 date: 2019-06-07
 title: Gridsome with Forestry CMS
-author: Nichlas W. Andersen
+author: Bob Liu
+cuisine:
+  - Content strategy
+  - User research
 excerpt: Get up and running with Forestry CMS, a git-backed headless CMS with a slick editing interface.
-
 ---
+
 #### Use Forestry as a CMS for Gridsome
 
 [Forestry](https://forestry.io) is a git-based headless CMS that allow editorial teams to work on JAMstack sites.

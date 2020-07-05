@@ -10,7 +10,7 @@
         </g-link>
       </div>
       <nav class="nav right">
-        <g-link class="nav__link" to="/journal"></g-link>
+        <g-link class="nav__link" to="/journal">Journal</g-link>
         <g-link class="nav__link" to="/contact"></g-link>
         <g-link class="nav__link" to="/cookbook">UX Cookbook</g-link>
       </nav>

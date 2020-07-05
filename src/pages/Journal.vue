@@ -7,7 +7,7 @@
     </div>
 
     <div class="filter noselect">
-      <div v-for="item in $page.posts.edges" :key="item.node.id" class="styled-checkbox">
+      <div v-for="item in getCuisines" :key="item.node.id" class="styled-checkbox">
         <label>
           <input type="checkbox" v-model="selectedCuisines" :value="item.node.cuisine" />
           <span>{{ item.node.cuisine }}</span>
@@ -61,11 +61,31 @@ query Journal {
 export default {
   data() {
     return {
-      recipes: [],
-      selectedCuisines: []
+      cuisines: [],
+      selectedCuisines: [],
+      recipes: []
     };
   },
   computed: {
+    getCuisines() {
+      var allCuisines = this.cuisines;
+      this.$page.posts.edges.forEach(function(e) {
+        if (e.node.cuisine.length > 1) {
+          let newCuisines = e.node.cuisine;
+          newCuisines.forEach(function(c) {
+            if (allCuisines.indexOf(c) == -1) {
+              allCuisines.push(c);
+            }
+          });
+        } else {
+          let newCuisine = Object.values(e.node.cuisine).toString();
+          if (allCuisines.indexOf(newCuisine) == -1) {
+            allCuisines.push(newCuisine);
+          }
+        }
+      });
+      console.log(allCuisines);
+    },
     getRecipes() {
       this.recipes = this.$page.posts.edges;
     },

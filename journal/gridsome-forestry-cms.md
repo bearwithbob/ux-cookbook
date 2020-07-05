@@ -4,7 +4,7 @@ title: Gridsome with Forestry CMS
 author: Bob Liu
 cuisine:
   - Content strategy
-  - User research
+  - UX research
 excerpt: Get up and running with Forestry CMS, a git-backed headless CMS with a slick editing interface.
 ---
 

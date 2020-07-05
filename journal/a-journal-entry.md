@@ -2,7 +2,7 @@
 date: 2019-05-17
 title: About Typography
 author: Bob Liu
-cuisine:
+cuisines:
   - UX research
 excerpt: Font face, vertical rythm, readability, this long fake text should flow.
 ---

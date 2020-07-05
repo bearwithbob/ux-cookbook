@@ -7,10 +7,10 @@
     </div>
 
     <div class="filter noselect">
-      <div v-for="item in getCuisines" :key="item.node.id" class="styled-checkbox">
+      <div v-for="item in allCuisines" :key="item.id" class="styled-checkbox">
         <label>
-          <input type="checkbox" v-model="selectedCuisines" :value="item.node.cuisine" />
-          <span>{{ item.node.cuisine }}</span>
+          <input type="checkbox" v-model="selectedCuisines" :value="item" />
+          <span>{{ item }}</span>
         </label>
       </div>
     </div>
@@ -33,7 +33,7 @@
     >
       <div class="container journal">
         <h2 class="journal-title">{{ item.node.title }}</h2>
-        <p class="journal-cuisine">{{ item.node.cuisine }}</p>
+        <p class="journal-cuisine">{{ item.node.cuisines }}</p>
         <p class="journal-excerpt">{{ item.node.excerpt }}</p>
       </div>
     </g-link>
@@ -49,7 +49,7 @@ query Journal {
         path
         title
         excerpt
-        cuisine
+        cuisines
       }
     }
   }
@@ -57,54 +57,55 @@ query Journal {
 </page-query>
 
 <script>
-// three steps: 1) get all cuisines and store into an array; 2) get all recipes; 3) filter recipes by selection
 export default {
   data() {
     return {
-      cuisines: [],
-      selectedCuisines: [],
-      recipes: []
+      recipes: [],
+      selectedCuisines: []
     };
   },
   computed: {
-    getCuisines() {
-      var allCuisines = this.cuisines;
+    // Find each unique cuisine from recipe YAML and store into the `cuisines` array
+    allCuisines() {
+      var allCuisines = [];
       this.$page.posts.edges.forEach(function(e) {
-        if (e.node.cuisine.length > 1) {
-          let newCuisines = e.node.cuisine;
+        // For recipes with more than one cuisines, compare each cuisine with existing ones
+        if (e.node.cuisines.length > 1) {
+          let newCuisines = e.node.cuisines;
           newCuisines.forEach(function(c) {
             if (allCuisines.indexOf(c) == -1) {
               allCuisines.push(c);
             }
           });
         } else {
-          let newCuisine = Object.values(e.node.cuisine).toString();
+          let newCuisine = Object.values(e.node.cuisines).toString();
           if (allCuisines.indexOf(newCuisine) == -1) {
             allCuisines.push(newCuisine);
           }
         }
       });
-      console.log(allCuisines);
+      return allCuisines;
     },
-    getRecipes() {
-      this.recipes = this.$page.posts.edges;
-    },
+
+    // Filter recipes by selection
     filteredRecipes() {
       var userSelected = this.selectedCuisines;
+      this.getRecipes();
+      // If no selection, show all recipes
       if (!userSelected.length) {
-        this.getRecipes;
         return this.recipes;
       } else {
-        this.getRecipes;
         return this.recipes.filter(function(recipe) {
-          // console.log(recipe.node.cuisine);
-          // console.log(Array.from(recipe.node.cuisine));
-          // console.log(JSON.parse(JSON.stringify(userSelected)));
-          // console.log(userSelected.includes(recipe.node.cuisine));
-          // console.log(recipe.node.cuisine.some(c => userSelected.includes(c)));
-          return recipe.node.cuisine.some(c => userSelected.includes(c));
+          let currentCuisines = recipe.node.cuisines;
+          return currentCuisines.some(c => userSelected.includes(c));
         });
       }
+    }
+  },
+  methods: {
+    // Find all recipes from GraphQL query
+    getRecipes: function() {
+      this.recipes = this.$page.posts.edges;
     }
   }
 };

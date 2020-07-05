@@ -2,7 +2,7 @@
 date: 2019-05-18
 title: macOS development environment
 author: Bob Liu
-cuisine:
+cuisines:
   - Visual design
 excerpt: Get up and running with a fresh macOS Catalina install
 ---

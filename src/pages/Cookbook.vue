@@ -42,6 +42,7 @@
               <span>UX fundamentals</span>
             </label>
           </div>
+          <button v-on:click="clearFilters">Clear filters</button>
         </div>
         <!-- todo: insert a button that clears all checkboxes -->
         <div class="recipes">
@@ -88,6 +89,15 @@ export default {
           return recipe.categories.some(c => userSelected.includes(c));
         });
       }
+    }
+  },
+  methods: {
+    clearFilters() {
+      var checkedCheckboxes = document.getElementsByTagName("input");
+      for (var i = 0; i < checkedCheckboxes.length; ++i) {
+        checkedCheckboxes[i].checked = false;
+      }
+      this.selectedCuisines = [];
     }
   }
 };
@@ -149,14 +159,14 @@ export default {
   display: grid;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .recipe {
   display: inline-block;
   text-align: center;
   border-radius: 4px;
-  padding: 72px;
+  padding: 96px 32px;
   background-color: #f9f9f9;
 }
 </style>

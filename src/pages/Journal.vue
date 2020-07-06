@@ -4,39 +4,33 @@
       <div class="journal-hero">
         <h1 class="journal-header">a wise person once said...</h1>
       </div>
-    </div>
 
-    <div class="filter noselect">
-      <div v-for="item in allCuisines" :key="item.id" class="styled-checkbox">
-        <label>
-          <input type="checkbox" v-model="selectedCuisines" :value="item" />
-          <span>{{ item }}</span>
-        </label>
+      <div class="filter noselect">
+        <div v-for="item in allCuisines" :key="item.id" class="styled-checkbox">
+          <label>
+            <input type="checkbox" v-model="selectedCuisines" :value="item" />
+            <span>{{ item }}</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="recipes">
+        <ul class="recipes-list">
+          <g-link
+            v-for="recipe in filteredRecipes"
+            :to="recipe.node.path"
+            :key="recipe.node.title"
+            class="recipe"
+          >
+            <li>
+              {{ recipe.node.title }}
+            </li>
+            <span class="journal-cuisine">{{ recipe.node.cuisines }}</span>
+            <span class="journal-excerpt">{{ recipe.node.excerpt }}</span>
+          </g-link>
+        </ul>
       </div>
     </div>
-
-    <div class="recipes">
-      <ul class="recipes-list">
-        <li
-          class="recipe"
-          v-for="recipe in filteredRecipes"
-          :key="recipe.node.title"
-        >{{ recipe.node.title }}</li>
-      </ul>
-    </div>
-
-    <g-link
-      :to="item.node.path"
-      v-for="item in $page.posts.edges"
-      :key="item.node.id"
-      class="journal-post"
-    >
-      <div class="container journal">
-        <h2 class="journal-title">{{ item.node.title }}</h2>
-        <p class="journal-cuisine">{{ item.node.cuisines }}</p>
-        <p class="journal-excerpt">{{ item.node.excerpt }}</p>
-      </div>
-    </g-link>
   </Layout>
 </template>
 
@@ -61,7 +55,7 @@ export default {
   data() {
     return {
       recipes: [],
-      selectedCuisines: []
+      selectedCuisines: [],
     };
   },
   computed: {
@@ -97,17 +91,17 @@ export default {
       } else {
         return this.recipes.filter(function(recipe) {
           let currentCuisines = recipe.node.cuisines;
-          return currentCuisines.some(c => userSelected.includes(c));
+          return currentCuisines.some((c) => userSelected.includes(c));
         });
       }
-    }
+    },
   },
   methods: {
     // Find all recipes from GraphQL query
     getRecipes: function() {
       this.recipes = this.$page.posts.edges;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -164,5 +158,71 @@ export default {
   .journal-post {
     padding: 5rem 0;
   }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.filter {
+  overflow: hidden;
+}
+
+.styled-checkbox {
+  margin: 6px;
+  background-color: #efefef;
+  border-radius: 4px;
+  overflow: auto;
+  float: left;
+}
+
+.styled-checkbox:hover {
+  background: #333;
+  color: #fff;
+}
+
+.styled-checkbox label span {
+  text-align: center;
+  padding: 8px 16px;
+  display: block;
+}
+
+.styled-checkbox label span:hover {
+  cursor: pointer;
+}
+
+.styled-checkbox label input {
+  position: absolute;
+  top: -20px;
+}
+
+.styled-checkbox input:checked + span {
+  background-color: #333;
+  color: #fff;
+}
+
+.recipes {
+}
+
+.recipes-list {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.recipe {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 96px 32px;
+  background-color: #f9f9f9;
 }
 </style>

@@ -1,10 +1,10 @@
 ---
 date: 2019-05-17
-title: About Typography
+title: Usability testing
 author: Bob Liu
 cuisines:
-  - UX research
-excerpt: Font face, vertical rythm, readability, this long fake text should flow.
+  - User research
+excerpt: Test, fail, iterate — that's how design works.
 ---
 
 ![](/uploads/markus-spiske-516263-unsplash.jpg)

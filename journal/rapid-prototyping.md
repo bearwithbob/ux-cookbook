@@ -1,11 +1,10 @@
 ---
 date: 2019-06-07
-title: Gridsome with Forestry CMS
+title: Rapid prototyping
 author: Bob Liu
 cuisines:
-  - Content strategy
-  - UX research
-excerpt: Get up and running with Forestry CMS, a git-backed headless CMS with a slick editing interface.
+  - Visual design
+excerpt: Test your ideas by creating a quick draft.
 ---
 
 #### Use Forestry as a CMS for Gridsome

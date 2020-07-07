@@ -2,7 +2,7 @@
   <Layout>
     <div class="container">
       <div class="journal-hero">
-        <h1 class="journal-header">a wise person once said...</h1>
+        <!-- <h1 class="journal-header">a wise person once said...</h1> -->
       </div>
 
       <div class="filter noselect">
@@ -22,11 +22,13 @@
             :key="recipe.node.title"
             class="recipe"
           >
-            <li>
-              {{ recipe.node.title }}
+            <li class="journal-card">
+              <h2 class="journal-recipe">{{ recipe.node.title }}</h2>
+              <span class="journal-cuisine">{{
+                recipe.node.cuisines.join(", ")
+              }}</span>
+              <p class="journal-excerpt">{{ recipe.node.excerpt }}</p>
             </li>
-            <span class="journal-cuisine">{{ recipe.node.cuisines }}</span>
-            <span class="journal-excerpt">{{ recipe.node.excerpt }}</span>
           </g-link>
         </ul>
       </div>
@@ -110,7 +112,7 @@ export default {
   max-width: 720px;
 }
 .journal-hero {
-  padding: 4rem 0;
+  padding: 1rem 0;
   text-align: center;
   color: var(--color-base-1);
 }
@@ -140,12 +142,27 @@ export default {
   margin: 0;
   padding: 0;
 }
-.journal-title {
-  font-size: 2rem;
-  color: var(--color-contrast);
+
+.journal-card {
+  text-align: left;
 }
+
+.journal-recipe {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .journal-excerpt {
+  font-size: 0.875rem;
+  color: #555 !important;
+  display: box;
   color: var(--color-contrast-1);
+  line-height: 18px !important;
+  margin-top: 1.5rem;
+}
+
+.journal-cuisine {
+  font-size: 0.875rem;
 }
 
 @media (min-width: 560px) {
@@ -222,7 +239,8 @@ export default {
   display: inline-block;
   text-align: center;
   border-radius: 4px;
-  padding: 96px 32px;
+  padding: 32px 32px;
   background-color: #f9f9f9;
+  text-decoration: none;
 }
 </style>

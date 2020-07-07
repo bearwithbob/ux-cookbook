@@ -1,10 +1,10 @@
 ---
 date: 2019-06-04
-title: VueJS for your next project
+title: User interviews
 author: Bob Liu
 cuisines:
-  - Accessibility
-excerpt: Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces.
+  - User research
+excerpt: Let real users show you the way to their brains.
 ---
 
 ## VueJS is awesome

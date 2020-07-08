@@ -38,5 +38,10 @@ fields:
   default: Bob Liu
 - name: cuisine
   type: tag_list
-  default: []
+  default:
+  - Accessibility
+  - Data & analytics
+  - UX fundamentals
+  - User research
+  - Visual design
   label: Cuisine

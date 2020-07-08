@@ -40,5 +40,11 @@ fields:
   config:
     source:
       type: simple
+    options:
+    - User research
+    - Accessibility
+    - Data & analytics
+    - UX fundamentals
+    - Visual design
   name: cuisine
   label: Cuisine

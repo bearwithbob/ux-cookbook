@@ -1,5 +1,5 @@
 ---
-label: Journal
+label: Cuisine
 hide_body: false
 fields:
 - type: text
@@ -37,21 +37,8 @@ fields:
   label: Author
   default: Bob Liu
 - type: select
-name: cuisine
-config:
-  source:
-    type: simple
-    section: authors
-    file: data/authors/nichlas-w-andersen.json
-  required: true
-  options:
-  - User research
-  - Content strategy
-  - Visual design
-  - Accessibility
-  - Data analysis
-  - UX fundamentals
-label: Cuisine
-default: User research
-pages:
-- journal/macos-development-environment.md
+  config:
+    source:
+      type: simple
+  name: cuisine
+  label: Cuisine

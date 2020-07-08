@@ -5,7 +5,8 @@ author: Bob Liu
 cuisines:
 - User research
 excerpt: Let real users show you the way to their brains.
-cuisine: []
+cuisine:
+- User research
 
 ---
 ## VueJS is awesome

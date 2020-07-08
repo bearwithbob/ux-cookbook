@@ -36,7 +36,7 @@ fields:
     - Rebecca Blakiston
   label: Author
   default: Bob Liu
-- name: cuisine
+- name: cuisines
   type: tag_list
   default:
   - Accessibility
@@ -44,4 +44,4 @@ fields:
   - UX fundamentals
   - User research
   - Visual design
-  label: Cuisine
+  label: Cuisines

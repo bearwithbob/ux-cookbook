@@ -56,3 +56,6 @@ fields:
     - UX fundamentals
     - Visual design
   label: Cuisines
+- name: featured
+  type: boolean
+  label: Featured

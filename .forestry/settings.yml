@@ -19,7 +19,7 @@ sections:
   templates:
   - journal
 - type: heading
-  label: Site configuration
+  label: Other configurations
 - type: document
   path: data/theme.json
   label: Theme config

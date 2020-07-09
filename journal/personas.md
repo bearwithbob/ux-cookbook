@@ -1,13 +1,14 @@
 ---
 date: 2019-06-07
 title: Personas
-author: Bob Liu
+author: Rebecca Blakiston
 cuisines:
-  - UX fundamentals
-  - User research
-excerpt: Create fictional characters that represent your users to better understand them.
----
+- UX fundamentals
+- User research
+excerpt: Create fictional characters that represent your users to better understand
+  them.
 
+---
 #### Use Forestry as a CMS for Gridsome
 
 [Forestry](https://forestry.io) is a git-based headless CMS that allow editorial teams to work on JAMstack sites.

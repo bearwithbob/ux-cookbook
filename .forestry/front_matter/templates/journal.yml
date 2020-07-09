@@ -7,22 +7,22 @@ fields:
   label: Title
   config:
     required: true
-- type: textarea
-  name: excerpt
-  label: Excerpt
-  description: Short snippet that will show outside of the actual post
+- name: cuisines
+  type: list
   config:
-    required: true
-- type: datetime
-  name: date
-  label: Date
-  config:
-    required: true
-    display_utc: true
-    date_format: YYYY-MM-DD
-    time_format: ''
-    export_format: YYYY-MM-DD
-  default: now
+    use_select: true
+    min: 1
+    max: 5
+    source:
+      type: simple
+      section: journal
+    options:
+    - Accessibility
+    - Data & analytics
+    - User research
+    - UX fundamentals
+    - Visual design
+  label: Cuisines
 - type: select
   name: author
   config:
@@ -40,22 +40,22 @@ fields:
     - Rachel Brown
   label: Author
   default: Bob Liu
-- name: cuisines
-  type: list
+- type: datetime
+  name: date
+  label: Date
   config:
-    use_select: true
-    min: 1
-    max: 5
-    source:
-      type: simple
-      section: journal
-    options:
-    - Accessibility
-    - Data & analytics
-    - User research
-    - UX fundamentals
-    - Visual design
-  label: Cuisines
+    required: true
+    display_utc: true
+    date_format: YYYY-MM-DD
+    time_format: ''
+    export_format: YYYY-MM-DD
+  default: now
+- type: textarea
+  name: excerpt
+  label: Excerpt
+  description: Short snippet that will show outside of the actual post
+  config:
+    required: true
 - name: featured
   type: boolean
   label: Featured

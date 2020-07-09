@@ -34,10 +34,10 @@ fields:
     options:
     - Bob Liu
     - Rebecca Blakiston
-    - Emma Gould
-    - Rachel Brown
     - America Curl
+    - Emma Gould
     - Yashu Vats
+    - Rachel Brown
   label: Author
   default: Bob Liu
 - name: cuisines

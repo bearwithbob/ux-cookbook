@@ -1,5 +1,5 @@
 ---
-label: Cuisine
+label: Recipes
 hide_body: false
 fields:
 - type: text

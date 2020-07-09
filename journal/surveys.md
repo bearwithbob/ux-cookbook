@@ -1,12 +1,12 @@
 ---
 date: 2019-05-18
 title: Surveys
-author: Bob Liu
+author: Rachel Brown
 cuisines:
-  - User research
+- User research
 excerpt: Collect feedback without pain, both for you and for those filling it out.
----
 
+---
 If all of this comes off as mixed-up to you, that's because it is! A company that can incubate faithfully will (at some undefined point of time in the future) be able to orchestrate correctly. Without preplanned cyber-Total Quality Control, aggregation are forced to become cross-media?
 
 ## macOS Catalina

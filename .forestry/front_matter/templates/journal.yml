@@ -37,11 +37,9 @@ fields:
   label: Author
   default: Bob Liu
 - name: cuisines
-  type: tag_list
-  default:
-  - Accessibility
-  - Data & analytics
-  - UX fundamentals
-  - User research
-  - Visual design
+  type: list
+  config:
+    use_select: false
+    min: 1
+    max: 5
   label: Cuisines

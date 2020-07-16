@@ -9,7 +9,7 @@ excerpt: Create fictional characters that represent your users to better underst
   them.
 
 ---
-# Why personas?
+## Why personas?
 
 > Personas are fictional characters, which you create based upon your research in order to represent the different user types that might use your service, product, site, or brand in a similar way.
 
@@ -29,15 +29,15 @@ Personas help us:
 * get on the same page about **who** we are designing for
 * guide decisions related to **services**, **products**, **content**, **design**, and more
 
-# Creating personas
+## Creating personas
 
-## Choosing a type of persona
+### Choosing a type of persona
 
 **Proto personas** are based on existing knowledge and assumptions about your audience. They are quick, easy, and imperfect. Their main goal is to get a team on the same page about your users. You can sketch an assumption persona in a 30 minute meeting, or run a workshop to create a set of personas in a couple of hours.
 
 **Research-based personas** are based on user research data gathered from such methods as user interviews, surveys, web analytics, and focus groups. They take more time but are more authentic and often more useful than assumption-based personas. Research-based personas can be **qualitative** or **statistical**, and may take a few weeks or months to create. We usually recommend qualitative personas, which are quicker to create that statistical personas and more reflective of real users than proto personas.
 
-## Choosing your audience segments
+### Choosing your audience segments
 
 Each persona should represent a segment of your audience. You can determine a segment by recognizing which clusters of your audience have similar goals and behaviors when it comes to the service or product you are designing. For example, if you are building a learning management system for a university you might have an "instructor" and "student" persona. If you are designing a study lounge you might have a "collaborative studier" and a "quiet studier" persona.
 
@@ -49,7 +49,7 @@ Avoid having too many personas to remember. We recommend no more than 5 personas
 
 **Secondary personas:** employee, donor
 
-## Building your personas
+### Building your personas
 
 If you work at the UA Libraries, try adapting one of our [existing qualitative personas](https://arizona.app.box.com/file/683899687803), which were based on user research in 2018.
 

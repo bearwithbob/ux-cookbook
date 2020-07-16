@@ -1,0 +1,43 @@
+// Font sizes
+$base-font-size: 17px;
+$base-font-size-phone: 18px;
+
+// Color palette
+$ink: #0468b4;
+$ink-light: #5695e7;
+$ink-dark: #003e84;
+$watercolor-red: #ffebee;
+$watercolor-orange: #fff3e0;
+$watercolor-yellow: #fff9c4;
+$watercolor-teal: #e0f2f1;
+$watercolor-blue: #d3ebff;
+$watercolor-purple: #ede7f6;
+$black: #000;
+$gray-dark: #828282;
+$gray-medium: #4f4f4f;
+$gray-light: #f8f8f8;
+$white: #fff;
+
+// Colors
+$background-color: $white;
+$background-content-color: $white;
+$background-code-color: #fffbf3;
+$base-color: $black;
+$body-color: $base-color;
+$title-color: $body-color;
+$accent-color: $ink;
+$link-color: $body-color;
+$link-hover-color: $ink;
+$link-focus-color: $ink-light;
+$link-active-color: $ink-dark;
+$border-color: rgba(0, 0, 0, 0.1);
+
+// Spacing
+$breakpoint-phone: 550px;
+$breakpoint-tablet: 900px;
+$space: 3.5rem;
+$leading-space: 1.75rem;
+$content-width: 860px;
+$header-height: 5rem;
+$radius: 5px;
+$wide: 1200px;

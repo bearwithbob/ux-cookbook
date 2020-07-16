@@ -1,0 +1,131 @@
+@import "variables";
+
+// @font-face {
+//   font-family: Larsseit;
+//   src: url("~@/assets/fonts/larsseit.woff2") format("woff2"),
+//     url("~@/assets/fonts/larsseit.woff") format("woff"),
+//     url("~@/assets/fonts/larsseit.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: Larsseit;
+//   src: url("~@/assets/fonts/larsseit-italic.woff2") format("woff2"),
+//     url("~@/assets/fonts/larsseit-italic.woff") format("woff"),
+//     url("~@/assets/fonts/larsseit-italic.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: Larsseit;
+//   src: url("~@/assets/fonts/larsseit-bold.woff2") format("woff2"),
+//     url("~@/assets/fonts/larsseit-bold.woff") format("woff"),
+//     url("~@/assets/fonts/larsseit-bold.ttf") format("truetype");
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+// html {
+//   font-size: $base-font-size-phone;
+//   font-family: "Larsseit", sans-serif;
+//   letter-spacing: 0em;
+//   @media (min-width: $breakpoint-phone) {
+//     font-size: $base-font-size;
+//   }
+// }
+
+body {
+  font-family: Larsseit, -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.55;
+  color: black;
+}
+
+//   @media (min-width: $breakpoint-phone) {
+//     line-height: 1.5;
+//   }
+// }
+
+// a:not(.button) {
+//   color: $link-color;
+//   transition: all 0.1s;
+//   @media (hover: hover) {
+//     &:hover {
+//       color: $link-hover-color !important;
+//       fill: $link-hover-color;
+//     }
+//   }
+// }
+
+// p {
+//   margin-bottom: 1.25em;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5 {
+//   transition: color 0.6s;
+//   color: $title-color;
+//   margin: 2.75rem 0 1rem;
+//   font-weight: bold;
+//   line-height: 1.15;
+// }
+
+// h1 {
+//   margin-top: 0;
+//   font-size: 1.82em;
+// }
+
+// h2 {
+//   margin-top: 6rem;
+//   margin-bottom: 2rem;
+//   font-size: 1.56em;
+// }
+
+// h3 {
+//   font-size: 1.24em;
+//   margin-top: 3rem;
+//   margin-bottom: 1.5rem;
+// }
+
+// h4 {
+//   font-size: 1.08em;
+// }
+
+// small {
+//   font-size: 0.88em;
+// }
+
+// strong {
+//   font-weight: 600;
+// }
+
+blockquote {
+  border-left: 4px solid #999;
+  padding-left: $leading-space;
+  color: $title-color;
+}
+
+em {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.25em;
+  margin-bottom: 1.25em;
+  li {
+    margin-bottom: 0.6em;
+  }
+}
+ol {
+  list-style-type: decimal;
+  margin-left: 1.25em;
+  margin-bottom: 1.25em;
+  li {
+    margin-bottom: 0.6em;
+  }
+}

@@ -13,7 +13,7 @@ excerpt: Create fictional characters that represent your users to better underst
 
 > Personas are fictional characters, which you create based upon your research in order to represent the different user types that might use your service, product, site, or brand in a similar way.
 
-* Rikke Dam and Teo Siang, Interaction Design Foundation
+— Rikke Dam and Teo Siang, Interaction Design Foundation
 
 Personas are design and communication tools that:
 

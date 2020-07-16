@@ -19,7 +19,11 @@
             </div>
             <div class="journal-cuisine">
               <span class="label">Cuisine</span>
-              <span class="cuisine-name" v-text="$page.post.cuisine" />
+              <span class="cuisine-name">
+                {{
+                $page.post.cuisines.join(", ")
+                }}
+              </span>
             </div>
           </div>
         </div>
@@ -36,7 +40,7 @@ query JournalPost ($path: String!) {
     title
     author
     cuisines
-    date (format: "D. MMMM YYYY")
+    date (format: "MM/DD/YYYY")
     timeToRead
     content
   }

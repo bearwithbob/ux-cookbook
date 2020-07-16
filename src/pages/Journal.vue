@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <LatestJournals :journals="$page.posts.edges.slice(0,4)" />
+    <div class="journal-title container">
+      <span class="label">All recipes</span>
+    </div>
     <div class="container">
       <div class="journal-hero">
         <!-- <h1 class="journal-header">a wise person once said...</h1> -->
@@ -24,9 +28,11 @@
           >
             <li class="journal-card">
               <h2 class="journal-recipe">{{ recipe.node.title }}</h2>
-              <span class="journal-cuisine">{{
+              <span class="journal-cuisine">
+                {{
                 recipe.node.cuisines.join(", ")
-              }}</span>
+                }}
+              </span>
               <p class="journal-excerpt">{{ recipe.node.excerpt }}</p>
             </li>
           </g-link>
@@ -53,11 +59,16 @@ query Journal {
 </page-query>
 
 <script>
+import LatestJournals from "@/components/LatestJournals";
+
 export default {
+  components: {
+    LatestJournals
+  },
   data() {
     return {
       recipes: [],
-      selectedCuisines: [],
+      selectedCuisines: []
     };
   },
   computed: {
@@ -93,17 +104,17 @@ export default {
       } else {
         return this.recipes.filter(function(recipe) {
           let currentCuisines = recipe.node.cuisines;
-          return currentCuisines.some((c) => userSelected.includes(c));
+          return currentCuisines.some(c => userSelected.includes(c));
         });
       }
-    },
+    }
   },
   methods: {
     // Find all recipes from GraphQL query
     getRecipes: function() {
       this.recipes = this.$page.posts.edges;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -115,6 +126,11 @@ export default {
   padding: 1rem 0;
   text-align: center;
   color: var(--color-base-1);
+}
+.journal-title {
+  margin-top: 6rem;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 .journal-header {
   font-size: 3rem;
@@ -155,7 +171,7 @@ export default {
 .journal-excerpt {
   font-size: 0.875rem;
   color: #555 !important;
-  display: box;
+  display: flex;
   color: var(--color-contrast-1);
   line-height: 18px !important;
   margin-top: 1.5rem;
@@ -199,7 +215,7 @@ export default {
 }
 
 .styled-checkbox:hover {
-  background: #333;
+  background: #666;
   color: #fff;
 }
 
@@ -219,7 +235,7 @@ export default {
 }
 
 .styled-checkbox input:checked + span {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
 }
 

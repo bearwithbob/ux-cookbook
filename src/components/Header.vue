@@ -9,12 +9,13 @@
       <div class="left">
         <!-- <g-link :to="{ name: 'home' }" class="home-link">
           <img src="../../static/logo.svg" :alt="settings.site_name" class="logo" />
-        </g-link> -->
+        </g-link>-->
       </div>
       <nav class="nav right">
+        <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/journal">Cookbook</g-link>
         <!-- <g-link class="nav__link" to="/contact"></g-link>
-        <g-link class="nav__link" to="/cookbook">UX Cookbook</g-link> -->
+        <g-link class="nav__link" to="/cookbook">UX Cookbook</g-link>-->
       </nav>
     </div>
   </header>
@@ -25,9 +26,9 @@ export default {
   data() {
     return {
       logo: require("../../static/logo.svg"),
-      settings: require("../../data/theme.json"),
+      settings: require("../../data/theme.json")
     };
-  },
+  }
 };
 </script>
 

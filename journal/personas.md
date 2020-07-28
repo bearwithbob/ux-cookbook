@@ -9,11 +9,13 @@ excerpt: Create fictional characters that represent your users to better underst
   them.
 
 ---
+![persona snapshot: Sam the student attends classes, complete assignments, studies](/uploads/screenshot-2020-07-28-09-02-38.png)
+
 ## Why personas?
 
 > Personas are fictional characters, which you create based upon your research in order to represent the different user types that might use your service, product, site, or brand in a similar way.
 
-— Rikke Dam and Teo Siang, Interaction Design Foundation
+* Rikke Dam and Teo Siang, Interaction Design Foundation
 
 Personas are design and communication tools that:
 
@@ -58,6 +60,8 @@ Everyone else, start with our [persona template](https://arizona.app.box.com/fil
 1. A **name** and key **audience segment**. By giving the persona a name, it will be easier to refer to it in your project discussions. Some people like to use alliteration to make it more memorable (e.g. "Rui the Researcher").
 2. **Goals**. These describe the person's overarching professional, personal, or academic goals. They don't have to be related directly to the product or service, though should have some relevance to what you are designing. For example, a student's goal might be "Graduate within four years."
 3. **Behaviors**. These describe actual or potential behaviors or actions the person would have with the particular product or service. They are much more specific than goals. For example, a potential student's behavior related to a financial aid website might be, "Apply for a scholarship."
+
+![photo of a woman wearing a hijab and reading a book](/uploads/sam.jpg)
 
 With these components identified, you can fill in the details and bring the person to life:
 

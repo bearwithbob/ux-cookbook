@@ -69,3 +69,5 @@ With these components identified, you can fill in the details and bring the pers
 2. A **photo**. This is optional and has benefits and drawbacks. A photo is beneficial because it can make the person more relatable and help build empathy, but may cause assumptions or bias. Avoid using generic stock images.
 3. **Descriptors**. These adjectives can help bring the person to life and build empathy. Descriptors can include common characteristics such as "motivated," "curious," or "busy."
 4. **Constraints.** These describe technical, knowledge, or other constraints that may prevent the person from achieving their goals or behaviors. For example, a new instructor's constraints might be, "Has never taught online before" or, "Experiences imposter syndrome." They tend to reflect broad personal or professional constraints, though if useful they can reflect specific known pain points associated with the product or service, such as "Uses an iPad to access the interface" or "Not familiar with grant terminology."
+
+![Complete persona example with goals, behaviors, and constraints](/uploads/screenshot-2020-07-28-08-59-39.png)

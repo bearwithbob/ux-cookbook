@@ -70,8 +70,6 @@ With these components identified, you can fill in the details and bring the pers
 
 # Resources
 
-[UX Playbook personas.pptx](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/32ff5ebe-fd9a-4d16-8064-3db7a2bdb32e/UX_Playbook_personas.pptx)
-
 * [Library personas](https://arizona.app.box.com/file/683899687803)
 * [UX@UA website personas](https://arizona.app.box.com/file/402214254423)
 * [Persona template](https://arizona.app.box.com/file/683897205829)

@@ -70,9 +70,9 @@ With these components identified, you can fill in the details and bring the pers
 
 # Resources
 
+* [Persona template](https://arizona.app.box.com/file/683897205829)
 * [Library personas](https://arizona.app.box.com/file/683899687803)
 * [UX@UA website personas](https://arizona.app.box.com/file/402214254423)
-* [Persona template](https://arizona.app.box.com/file/683897205829)
 
 # Credits
 
